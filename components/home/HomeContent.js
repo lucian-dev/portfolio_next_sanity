@@ -23,7 +23,7 @@ const HomeContent = () => {
     <div className={styles.content}>
       <div className={styles.info}>
         <h1>
-          Hello, <span>I'M Lucian</span>
+          Hello, <span>I&apos;M Lucian</span>
         </h1>
         <p>I am a Front-end Developer based in Bucharest, Romania.</p>
         <p>I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.</p>

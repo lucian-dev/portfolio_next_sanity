@@ -5,7 +5,7 @@ const ContactContent = () => {
     <div className={styles.contact}>
       <div className="mainTitle textCenter">
         <h1>Contact</h1>
-        <p>What project do you have in mind? Let's build together!</p>
+        <p>What project do you have in mind? Let&apos;s build together!</p>
       </div>
       <div className={styles.contactRow}>
         <div className={styles.social}>

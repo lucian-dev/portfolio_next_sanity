@@ -22,7 +22,7 @@ const AboutContent = () => {
             Then I discover WordPress, the most used CMS, which due to its flexibility and intuitive dashboard, which helps my clients to easily manage the content of the website,
             I start using it in most projects, making custom themes.
           </p>
-          <p>I'm also comfortable using PHP (for WP), Webpack, NPM, Git. Currently, loveship remain's for JavaScript, React, Jamstack world.</p>
+          <p>I&apos;m also comfortable using PHP (for WP), Webpack, NPM, Git. Currently, loveship remain&apos;s for JavaScript, React, Jamstack world.</p>
           <p>
             I have been able to enjoy the success of projects made in various fields with their initiators, working both as a freelancer but also collaborating with web design
             agencies such as{' '}
@@ -40,8 +40,8 @@ const AboutContent = () => {
             , Creativ89.
           </p>
           <p>
-            If you'd like to find out more about how I work or if you want to start a new project, please <Link href="/contact">contact me</Link> and give me information about the
-            project you have in mind.
+            If you&apos;d like to find out more about how I work or if you want to start a new project, please <Link href="/contact">contact me</Link> and give me information about
+            the project you have in mind.
           </p>
         </div>
       </div>
