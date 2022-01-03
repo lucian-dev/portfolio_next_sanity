@@ -1,0 +1,17 @@
+@keyframes updown {
+  from {
+    background-position: bottom center;
+  }
+  to {
+    background-position: top center;
+  }
+}
+
+@keyframes thAnim {
+  from {
+    object-position: top;
+  }
+  to {
+    object-position: bottom;
+  }
+}

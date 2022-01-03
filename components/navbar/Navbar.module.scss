@@ -1,0 +1,176 @@
+.nav {
+  position: fixed;
+  left: 15px;
+  top: 15px;
+  z-index: 99;
+  width: 250px;
+  height: calc(100vh - 30px);
+  padding: 15px;
+  background-color: var(--wrapperColor);
+  border-radius: 10px;
+  box-shadow: var(--boxShadowAlt);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transform: translateX(-265px);
+  @media (min-width: 1200px) {
+    transform: none;
+  }
+}
+
+.logo {
+  text-align: center;
+  h3 {
+    margin: 15px 0;
+  }
+  span {
+    display: block;
+    font-size: var(--lSize);
+    color: var(--secondaryColor);
+  }
+  img {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+}
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  li:not(:last-of-type) {
+    margin-bottom: 15px;
+  }
+  a {
+    position: relative;
+    display: inline-block;
+    font-family: var(--poppins);
+    font-size: var(--smSize);
+    color: var(--secondaryColor);
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  a:after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--primaryColor);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s cubic-bezier(0.65, 0.05, 0.36, 1);
+  }
+  a:hover,
+  a.activeLink {
+    color: var(--primaryColor);
+    &::after {
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid #424242;
+  padding-top: 15px;
+  a {
+    transition: all 0.3s ease-in-out;
+    svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      fill: var(--secondaryColor);
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  a:not(:last-of-type) {
+    margin-right: 5px;
+  }
+  a:hover {
+    svg {
+      fill: var(--primaryColor);
+    }
+  }
+}
+
+.burger {
+  position: absolute;
+  top: 0;
+  right: -65px;
+  z-index: 11111;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  &:hover {
+    color: var(--primaryColor);
+  }
+  @media (min-width: 1200px) {
+    display: none;
+  }
+}
+
+.activeBurger {
+  .burger {
+    color: var(--primaryColor);
+    &:hover {
+      color: var(--secondaryColor);
+    }
+  }
+}
+
+.burgerMenu {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 98;
+  background: transparentize(#1e1e28, $amount: 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.burgerInner {
+  height: 100vh;
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--wrapperColor);
+  box-shadow: var(--boxShadowAlt);
+  @media (min-width: 550px) {
+    max-width: 300px;
+  }
+}
+
+.navigationBurger {
+  text-align: center;
+  li {
+    padding: 15px 0;
+  }
+  a {
+    display: inline-block;
+    font-family: var(--poppins);
+    font-size: var(--h4Size);
+    color: var(--secondaryColor);
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+  }
+  a:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background-color: var(--primaryColor);
+    margin: 5px auto 0;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover,
+  a.activeLink {
+    color: var(--primaryColor);
+    &::after {
+      width: 25px;
+    }
+  }
+}

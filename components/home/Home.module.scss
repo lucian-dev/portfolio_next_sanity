@@ -1,0 +1,35 @@
+.content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
+  align-items: center;
+  gap: 50px;
+}
+
+.info {
+  max-width: 550px;
+  span {
+    display: block;
+    color: var(--secondaryColor);
+  }
+  p {
+    margin: 25px 0;
+  }
+}
+
+.typed {
+  font-size: var(--h3Size);
+  color: var(--primaryColor);
+  i {
+    font-style: normal;
+  }
+}
+
+.typedStrings {
+  padding-left: 25px;
+  line-height: 1;
+  span {
+    white-space: pre;
+    font-size: var(--h4Size);
+    color: var(--secondaryColor);
+  }
+}

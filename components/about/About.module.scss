@@ -1,0 +1,20 @@
+.content {
+  .info {
+    column-count: 1;
+    column-gap: 50px;
+    @media (min-width: 768px) {
+      column-count: 2;
+    }
+  }
+  a {
+    color: var(--secondaryColor);
+    text-decoration: underline;
+    transition: all 0.3s ease-in-out;
+  }
+  a:hover {
+    color: var(--primaryColor);
+  }
+  p:not(:last-of-type) {
+    margin-bottom: 25px;
+  }
+}

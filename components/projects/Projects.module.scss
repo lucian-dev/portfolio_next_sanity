@@ -1,0 +1,232 @@
+@import '@styles/animations.scss';
+
+// Last Projects Section
+.lastProjects {
+  position: relative;
+  margin-top: 50px;
+}
+
+// Last Projects Wrapper
+.lpWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+// filters
+.filterProducts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  @media (min-width: 500px) {
+    flex-direction: row;
+  }
+  li {
+    padding: 10px;
+    @media (min-width: 500px) {
+      padding: 0 10px;
+    }
+  }
+  a {
+    cursor: pointer;
+  }
+}
+
+// Projects Card Grid
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(460px, 100%), 1fr));
+  gap: 25px;
+}
+
+.lpLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    .lpInfo {
+      opacity: 1;
+    }
+    .lpImgSm {
+      transform: translateX(0px);
+    }
+    .category {
+      opacity: 1;
+    }
+  }
+}
+
+.lpImgBig,
+.lpImgSm {
+  position: relative;
+  border-top: 16px solid var(--bodyColor);
+  border-bottom: 16px solid var(--bodyColor);
+  border-left: 8px solid var(--bodyColor);
+  border-right: 8px solid var(--bodyColor);
+  border-radius: 20px;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}
+
+.lpImgBig {
+  width: 100%;
+  height: 300px;
+  box-shadow: var(--boxShadowAlt);
+  @media (min-width: 550px) {
+    width: 525px;
+  }
+  @media (min-width: 900px) {
+    width: 425px;
+  }
+  img {
+    animation-name: thAnim;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+}
+
+.lpInfo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparentize(#1e1e28, $amount: 0.4);
+  z-index: 22;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  svg {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 25px;
+    stroke: var(--secondaryColor);
+  }
+}
+
+.lpImgSm {
+  position: relative;
+  display: none;
+  max-width: 125px;
+  height: 250px;
+  transform: translateX(-35px);
+  box-shadow: var(--boxShadow);
+  transition: all 0.5s ease-in-out;
+  @media (min-width: 550px) {
+    display: block;
+  }
+}
+
+.category {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--poppins);
+  font-size: var(--smSize);
+  font-weight: 700;
+  color: var(--secondaryColor);
+  background: transparentize(#1e1e28, $amount: 0.4);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+}
+
+// Project Page
+.project h1::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 2px;
+  background-color: var(--secondaryColor);
+  margin-right: 5px;
+}
+
+.gridProject {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
+  gap: 15px;
+  align-items: center;
+}
+
+.info {
+  span {
+    display: block;
+    font-family: var(--poppins);
+    font-weight: bold;
+    color: var(--primaryColor);
+  }
+  span:not(:first-of-type) {
+    margin-top: 15px;
+  }
+  .linkProject {
+    margin-top: 25px;
+  }
+}
+
+.projectImages {
+  position: relative;
+  height: 450px;
+  @media (min-width: 600px) {
+    height: 700px;
+  }
+}
+
+.imgBack {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 525px;
+  height: 400px;
+  right: 0;
+  transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(0, -50%);
+  box-shadow: var(--boxShadowAlt);
+  z-index: 1;
+  @media (min-width: 600px) {
+    transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1) translate(-10px, -50%);
+    height: 650px;
+  }
+}
+
+.imgFront {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  max-width: 125px;
+  height: 250px;
+  border-top: 16px solid var(--bodyColor);
+  border-bottom: 16px solid var(--bodyColor);
+  border-left: 8px solid var(--bodyColor);
+  border-right: 8px solid var(--bodyColor);
+  border-radius: 20px;
+  box-shadow: var(--boxShadowAlt);
+  transform: translate(5px, -50%);
+  overflow: hidden;
+  z-index: 2;
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  @media (min-width: 600px) {
+    max-width: 175px;
+    height: 325px;
+    transform: translate(25px, -50%);
+  }
+}
