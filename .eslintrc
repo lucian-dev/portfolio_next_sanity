@@ -3,5 +3,11 @@
   "rules": {
     // Other rules
     "@next/next/no-img-element": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
+  "env": {
+    "es6": true
   }
 }

@@ -1,5 +1,5 @@
 import Head from 'next/head';
-import { motion } from 'framer-motion';
+const { motion } = require('framer-motion');
 import { client } from '../../client';
 import { allProjects, projectDetail, allTestimonials } from '../../utils/data';
 import ProjectItem from '@components/projects/ProjectItem';

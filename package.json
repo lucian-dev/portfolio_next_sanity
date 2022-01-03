@@ -19,5 +19,8 @@
     "sass": "^1.45.2",
     "swiper": "^7.4.1",
     "typed.js": "^2.0.12"
+  },
+  "devDependencies": {
+    "eslint": "^8.6.0"
   }
 }

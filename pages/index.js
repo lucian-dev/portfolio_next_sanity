@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+const { motion } = require('framer-motion');
 import { client } from '../client';
 import { allTestimonials, featuredProjects } from '@utils/data';
 import HomeContent from '@components/home/HomeContent';
