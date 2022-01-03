@@ -1,5 +1,3 @@
-import { client } from '../../client';
-import { allTestimonials } from '@utils/data';
 import SwiperCore, { Navigation, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Testimonial from './Testimonial';
