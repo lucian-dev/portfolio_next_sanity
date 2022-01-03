@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
-import { AnimatePresence } from 'framer-motion';
 import NProgress from 'nprogress';
 import Layout from '@components/layout/Layout';
 import '@styles/globals.scss';
@@ -31,9 +30,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Layout>
-        <AnimatePresence exitBeforeEnter initial={false}>
-          <Component {...pageProps} />
-        </AnimatePresence>
+        <Component {...pageProps} />
       </Layout>
     </>
   );

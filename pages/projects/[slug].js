@@ -1,5 +1,4 @@
 import Head from 'next/head';
-const { motion } = require('framer-motion');
 import { client } from '../../client';
 import { allProjects, projectDetail, allTestimonials } from '../../utils/data';
 import ProjectItem from '@components/projects/ProjectItem';
@@ -12,20 +11,14 @@ const ProjectPage = ({ project, testimonials }) => {
       <Head>
         <title>{project.title}</title>
       </Head>
-      <motion.section
-        className={styles.mainSection}
-        initial={{ x: '-100%', opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ type: 'spring', bounce: 0.6, duration: 0.5, damping: 14 }}
-        exit={{ opacity: 0 }}
-      >
+      <section className={styles.mainSection}>
         <div className={styles.displayContent}>
           <div className={styles.container}>
             <ProjectItem project={project} />
             <Testimonials testimonials={testimonials} />
           </div>
         </div>
-      </motion.section>
+      </section>
     </>
   );
 };

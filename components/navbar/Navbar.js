@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { Divide as Hamburger } from 'hamburger-react';
-import { AnimatePresence, motion } from 'framer-motion';
 import ActiveLink from './ActiveLink';
 import styles from './Navbar.module.scss';
 
@@ -27,26 +26,6 @@ const menu = [
     path: '/contact',
   },
 ];
-
-const navVariants = {
-  hidden: { opacity: 0, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.2,
-      staggerChildren: 0.3,
-    },
-  },
-};
-
-const linkVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-  },
-};
 
 const Nav = () => {
   const [burger, setBurger] = useState(false);
@@ -87,29 +66,21 @@ const Nav = () => {
           <Hamburger toggled={burger} toggle={setBurger} size={26} duration={0.6} rounded label="Show menu" />
         </div>
       </nav>
-      <AnimatePresence>
-        {burger && (
-          <motion.div
-            className={styles.burgerMenu}
-            initial={{ x: '-100%', opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ type: 'spring', duration: 0.3 }}
-            exit={{ x: '-100%', opacity: 0 }}
-          >
-            <motion.div className={styles.burgerInner}>
-              <motion.ul className={styles.navigationBurger} variants={navVariants} initial="hidden" animate="visible">
-                {menu.map((item) => (
-                  <motion.li variants={linkVariants} key={item.id}>
-                    <ActiveLink href={item.path}>
-                      <a onClick={handleClick}>{item.page}</a>
-                    </ActiveLink>
-                  </motion.li>
-                ))}
-              </motion.ul>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {burger && (
+        <div className={styles.burgerMenu}>
+          <div className={styles.burgerInner}>
+            <ul className={styles.navigationBurger} initial="hidden" animate="visible">
+              {menu.map((item) => (
+                <li key={item.id}>
+                  <ActiveLink href={item.path}>
+                    <a onClick={handleClick}>{item.page}</a>
+                  </ActiveLink>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )}
     </>
   );
 };
