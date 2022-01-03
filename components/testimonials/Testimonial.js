@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { urlFor } from 'client';
 import styles from './Testimonials.module.scss';
 
@@ -5,7 +6,7 @@ const Testimonial = ({ testimonial }) => {
   return (
     <div className={styles.testimonialWrapper}>
       <div className={styles.authorImg}>
-        <img src={urlFor(testimonial.authorImage).url()} alt={testimonial.author} />
+        <Image src={urlFor(testimonial.authorImage).url()} alt={testimonial.author} width={90} height={90} />
       </div>
       <div className={styles.authorTest}>
         <p>{testimonial.text}</p>
