@@ -21,7 +21,7 @@ const ProjectItem = ({ project }) => {
                 <p>{item.maintenance.charAt(0).toUpperCase() + item.maintenance.slice(1)}</p>
                 <span>Collab:</span>
                 <p>{item.collab}</p>
-                <a href={{ pathname: item.projectUrl }} className={`btn ${styles.linkProject}`} target="_blank" rel="noopener noreferrer">
+                <a href={item.projectUrl} className={`btn ${styles.linkProject}`} target="_blank" rel="noopener noreferrer">
                   Visit website
                 </a>
                 <div className="btnBottom">
