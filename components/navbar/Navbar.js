@@ -35,8 +35,10 @@ const Nav = () => {
   return (
     <>
       <nav className={`${styles.nav} ${burger ? `${styles.activeBurger}` : ''}`}>
-        <div className={styles.logo}>
-          <Image src="/th_lucian.jpg" alt="Lucian-DEV Frontend Developer" width={100} height={100} />
+        <div className={styles.head}>
+          <div className={styles.thumbnail}>
+            <Image src="/th_lucian.jpg" alt="Lucian-DEV Frontend Developer" width={100} height={100} />
+          </div>
           <h3>
             Lucian <span>DEV</span>
           </h3>
@@ -45,7 +47,10 @@ const Nav = () => {
           {menu.map((item) => (
             <li key={item.id}>
               <ActiveLink href={item.path}>
-                <a>{item.page}</a>
+                <a>
+                  <span>0{item.id}</span>
+                  {item.page}
+                </a>
               </ActiveLink>
             </li>
           ))}
