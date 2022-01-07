@@ -1,3 +1,18 @@
+export const categories = [
+  {
+    id: 1,
+    name: 'Multi-Page',
+  },
+  {
+    id: 2,
+    name: 'LMS',
+  },
+  {
+    id: 3,
+    name: 'E-Commerce',
+  },
+];
+
 export const allProjects = `*[_type == 'project'] {
   _id,
   title,
@@ -9,6 +24,21 @@ export const allProjects = `*[_type == 'project'] {
     }
   }
 }`;
+
+export const filteredProjects = (category) => {
+  const query = `*[_type == "project" && projectType == "${category}"] {
+    _id,
+    title,
+    slug,
+    projectType,
+    image {
+      asset -> {
+        url
+      }
+    }
+  }`;
+  return query;
+};
 
 export const featuredProjects = `*[_type == 'project' && featured == 'yes'] {
   _id,
