@@ -11,6 +11,10 @@ export const categories = [
     id: 3,
     name: 'E-Commerce',
   },
+  {
+    id: 4,
+    name: 'Side-Projects',
+  },
 ];
 
 export const allProjects = `*[_type == 'project'] {
