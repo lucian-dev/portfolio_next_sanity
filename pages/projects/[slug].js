@@ -9,7 +9,7 @@ const ProjectPage = ({ project, testimonials }) => {
   return (
     <>
       <Head>
-        <title>{project.title}</title>
+        <title>Project - {project[0].title}</title>
       </Head>
       <section className={styles.mainSection}>
         <div className={styles.displayContent}>
