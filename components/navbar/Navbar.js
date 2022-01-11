@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+
 import { Divide as Hamburger } from 'hamburger-react';
 import ActiveLink from './ActiveLink';
 import styles from './Navbar.module.scss';

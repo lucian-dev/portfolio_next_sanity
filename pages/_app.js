@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import Head from 'next/head';
 import Router from 'next/router';
+import { ThemeProvider } from 'next-themes';
 import NProgress from 'nprogress';
 import Layout from '@components/layout/Layout';
 import '@styles/globals.scss';
@@ -29,9 +30,11 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="shortcut icon" href="/favicon.png" />
       </Head>
-      <Layout>
-        <Component {...pageProps} />
-      </Layout>
+      <ThemeProvider storageKey="theme" defaultTheme="dark" enableColorScheme={false}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ThemeProvider>
     </>
   );
 }

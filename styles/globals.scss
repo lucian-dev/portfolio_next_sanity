@@ -21,6 +21,44 @@
   --smSize: 1.2rem;
 }
 
+.switch-mode {
+  position: fixed;
+  right: 25px;
+  top: 25px;
+  z-index: 99;
+  span {
+    cursor: pointer;
+  }
+  img {
+    display: block;
+    width: 22px;
+  }
+}
+
+[data-theme='dark'] {
+  .switch-mode__dark {
+    display: none;
+  }
+  .switch-mode__light {
+    display: block;
+    filter: invert(100%);
+  }
+}
+[data-theme='light'] {
+  --bodyColor: #ffffff;
+  --wrapperColor: #ffffff;
+  --baseColor: #191923;
+  --primaryColor: #191923;
+  --secondaryColor: #1e1e28;
+  --bgColorGradient: #ffffff;
+  .switch-mode__light {
+    display: none;
+  }
+  .switch-mode__dark {
+    display: block;
+  }
+}
+
 *,
 *:after,
 *:before {
