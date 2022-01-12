@@ -8,7 +8,7 @@ const HomeContent = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['display: flex;\nalign-items: center;\n justify-content: space-between;\n '],
+      strings: ['display: flex;\nalign-items: center;\njustify-content: space-between;\n '],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
