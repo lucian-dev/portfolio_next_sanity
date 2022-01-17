@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { Divide as Hamburger } from 'hamburger-react';
 import ActiveLink from './ActiveLink';
+import thumb from '../../public/th_lucian.jpg';
 import styles from './Navbar.module.scss';
 
 const menu = [
@@ -37,7 +38,7 @@ const Nav = () => {
       <nav className={`${styles.nav} ${burger ? `${styles.activeBurger}` : ''}`}>
         <div className={styles.head}>
           <div className={styles.thumbnail}>
-            <Image src="/th_lucian.jpg" alt="Lucian-DEV Frontend Developer" width={100} height={100} />
+            <Image src={thumb} alt="Lucian-DEV Frontend Developer" width={100} height={100} />
           </div>
           <h3>
             Lucian <span>DEV</span>

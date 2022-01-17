@@ -16,13 +16,17 @@ const AboutContent = () => {
           <p>Back in 2013, I started with HTML/CSS to develop websites for personal projects as well as for certain local businesses.</p>
           <p>
             In time I added into my front-end skills: CSS Flexbox/Grid, Sass, jQuery, Gulp, tools that help me to build responsive layouts, animations, and gave me speed in
-            developing websites.
+            developing websites. I&apos;m also comfortable using Webpack, NPM, Git.
           </p>
+          <p></p>
           <p>
             Then I discover WordPress, the most used CMS, which due to its flexibility and intuitive dashboard, which helps my clients to easily manage the content of the website,
             I start using it in most projects, making custom themes.
           </p>
-          <p>I&apos;m also comfortable using PHP (for WP), Webpack, NPM, Git. Currently, loveship remain&apos;s for JavaScript, React, Jamstack world.</p>
+          <p>
+            Currently, loveship remains for JavaScript, React, Jamstack world, which I want to explore as much as I can. I am a lifelong learner so apps like Udemy, Scrimba,
+            freeCodeCamp are my best companions in this journey.
+          </p>
           <p>
             I have been able to enjoy the success of projects made in various fields with their initiators, working both as a freelancer but also collaborating with web design
             agencies such as{' '}
