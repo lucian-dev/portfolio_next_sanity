@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Navbar from '@components/navbar/Navbar';

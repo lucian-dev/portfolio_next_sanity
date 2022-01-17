@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
-import { Divide as Hamburger } from 'hamburger-react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { IoMdClose } from 'react-icons/io';
 import ActiveLink from './ActiveLink';
 import thumb from '../../public/th_lucian.jpg';
 import styles from './Navbar.module.scss';
@@ -68,9 +69,7 @@ const Nav = () => {
             </svg>
           </a>
         </div>
-        <div className={styles.burger}>
-          <Hamburger toggled={burger} toggle={setBurger} size={26} duration={0.6} rounded label="Show menu" />
-        </div>
+        <div className={styles.burger}>{!burger ? <GiHamburgerMenu onClick={handleClick} /> : <IoMdClose onClick={handleClick} />}</div>
       </nav>
       {burger && (
         <div className={styles.burgerMenu}>

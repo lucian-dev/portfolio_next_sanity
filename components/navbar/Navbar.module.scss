@@ -119,15 +119,27 @@
 }
 
 .burger {
+  // border: 1px solid red;
   position: absolute;
   top: 0;
   right: -65px;
   z-index: 98;
-  color: var(--secondaryColor);
+  // color: var(--secondaryColor);
+  width: 48px;
+  height: 48px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: all 0.3s ease-in-out;
-  &:hover {
-    color: var(--primaryColor);
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: var(--secondaryColor);
+    transition: all 0.4s ease-in-out;
+    &:hover {
+      fill: var(--primaryColor);
+    }
   }
   @media (min-width: 1200px) {
     display: none;
@@ -135,10 +147,10 @@
 }
 
 .activeBurger {
-  .burger {
-    color: var(--primaryColor);
+  .burger svg {
+    fill: var(--primaryColor);
     &:hover {
-      color: var(--secondaryColor);
+      fill: var(--secondaryColor);
     }
   }
 }
