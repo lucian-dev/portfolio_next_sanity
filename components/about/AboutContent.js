@@ -13,7 +13,7 @@ const AboutContent = () => {
       <div className={styles.content}>
         <div className={styles.info}>
           <p>I build different types of websites like One-Page, Multi-Page, E-commerce, Portfolio, Blogs, Landing Pages.</p>
-          <p>Back in 2013, I started with HTML/CSS to develop websites for personal projects as well as for certain local businesses.</p>
+          <p>Back in 2015, I started with HTML/CSS to develop websites for personal projects as well as for certain local businesses.</p>
           <p>
             In time I added into my front-end skills: CSS Flexbox/Grid, Sass, jQuery, Gulp, tools that help me to build responsive layouts, animations, and gave me speed in
             developing websites. I&apos;m also comfortable using Webpack, NPM, Git.

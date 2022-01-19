@@ -16,13 +16,11 @@
     flex-direction: row;
   }
   li {
+    position: relative;
     padding: 10px;
     @media (min-width: 550px) {
       padding: 0 10px;
     }
-  }
-  a {
-    cursor: pointer;
   }
 }
 
