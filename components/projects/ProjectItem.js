@@ -21,7 +21,12 @@ const ProjectItem = ({ project }) => {
                 <p>{item.maintenance.charAt(0).toUpperCase() + item.maintenance.slice(1)}</p>
                 <span>Collab:</span>
                 <p>{item.collab}</p>
-                <a href={item.projectUrl} className={`btn ${styles.linkProject}`} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={item.projectUrl}
+                  className={`btn ${styles.linkProject}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Visit website
                 </a>
                 <div className="btnBottom">
@@ -34,7 +39,12 @@ const ProjectItem = ({ project }) => {
                 <div className={styles.imgFront}>
                   <img src={urlFor(item.image).url()} alt={item.title} loading="lazy" />
                 </div>
-                <img src={urlFor(item.image).url()} alt={item.title} className={styles.imgBack} loading="lazy" />
+                <img
+                  src={urlFor(item.image).url()}
+                  alt={item.title}
+                  className={styles.imgBack}
+                  loading="lazy"
+                />
               </div>
             </div>
           </div>
