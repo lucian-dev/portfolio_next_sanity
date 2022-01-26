@@ -28,7 +28,10 @@ const ProjectsList = ({ projects }) => {
       </div>
       <ul className={styles.filterProducts}>
         <li>
-          <button className={`btnS ${!activeCategory ? 'isActive' : ''}`} onClick={() => setActiveCategory(null)}>
+          <button
+            className={`btnS ${!activeCategory ? 'isActive' : ''}`}
+            onClick={() => setActiveCategory(null)}
+          >
             View All
           </button>
         </li>
@@ -36,14 +39,20 @@ const ProjectsList = ({ projects }) => {
           const isActive = category.name.toLowerCase() === activeCategory;
           return (
             <li key={category.id}>
-              <button className={`btnS ${isActive ? 'isActive' : ''}`} onClick={() => setActiveCategory(category.name.toLowerCase())}>
+              <button
+                className={`btnS ${isActive ? 'isActive' : ''}`}
+                onClick={() => setActiveCategory(category.name.toLowerCase())}
+              >
                 {category.name}
               </button>
             </li>
           );
         })}
       </ul>
-      <div className={styles.projectsGrid}>{activeProjects && activeProjects.map((project) => <ProjectCard key={project._id} item={project} />)}</div>
+      <div className={styles.projectsGrid}>
+        {activeProjects &&
+          activeProjects.map((project) => <ProjectCard key={project._id} item={project} />)}
+      </div>
     </div>
   );
 };

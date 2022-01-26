@@ -1,3 +1,26 @@
+export const menu = [
+  {
+    id: 1,
+    page: 'Home',
+    path: '/',
+  },
+  {
+    id: 2,
+    page: 'About',
+    path: '/about',
+  },
+  {
+    id: 3,
+    page: 'Projects',
+    path: '/projects',
+  },
+  {
+    id: 4,
+    page: 'Contact',
+    path: '/contact',
+  },
+];
+
 export const categories = [
   {
     id: 1,

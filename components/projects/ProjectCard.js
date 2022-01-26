@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { capitalize } from '@utils/capitalize';
 import { urlFor } from '../../client';
 import { IoLinkOutline } from 'react-icons/io5';
 import styles from './Projects.module.scss';
@@ -16,7 +17,7 @@ const ProjectCard = ({ item }) => {
             </div>
           </div>
           <div className={styles.lpImgSm}>
-            <span className={styles.category}>{item.projectType.charAt(0).toUpperCase() + item.projectType.slice(1)}</span>
+            <span className={styles.category}>{capitalize(item.projectType)}</span>
             <img src={urlFor(item.image).url()} alt={item.title} loading="lazy" />
           </div>
         </a>
