@@ -46,6 +46,10 @@ const AboutContent = () => {
             <a href="https://connecto.ro" target="_blank" rel="noreferrer noopener">
               Connecto Agency
             </a>
+            ,{' '}
+            <a href="https://www.vav-digital.com/" target="_blank" rel="noreferrer noopener">
+              VAV-Digital
+            </a>
             , Creativ89.
           </p>
           <p>
