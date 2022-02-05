@@ -14,7 +14,7 @@ const Nav = () => {
 
   return (
     <>
-      <nav className={`${styles.nav} ${burger ? `${styles.activeBurger}` : ''}`}>
+      <nav className={`${burger ? `${styles.activeBurger} ${styles.nav}` : `${styles.nav}`}`}>
         <div className={styles.head}>
           <div className={styles.thumbnail}>
             <Image src={thumb} alt="Lucian-DEV Frontend Developer" width={100} height={100} />

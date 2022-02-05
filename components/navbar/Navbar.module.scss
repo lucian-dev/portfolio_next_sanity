@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(-265px);
+  transition: all 0.4s ease-in-out;
   @media (min-width: 1200px) {
     transform: none;
   }
@@ -119,12 +120,10 @@
 }
 
 .burger {
-  // border: 1px solid red;
   position: absolute;
   top: 0;
   right: -65px;
   z-index: 98;
-  // color: var(--secondaryColor);
   width: 48px;
   height: 48px;
   cursor: pointer;
@@ -147,6 +146,7 @@
 }
 
 .activeBurger {
+  transition: all 0.4s ease-in-out;
   .burger svg {
     fill: var(--primaryColor);
     &:hover {
@@ -172,6 +172,7 @@
   justify-content: center;
   background-color: var(--wrapperColor);
   box-shadow: var(--boxShadowAlt);
+  transition: all 0.4s ease-in-out;
   @media (min-width: 550px) {
     max-width: 300px;
   }
