@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect } from 'react';
-import { BiError } from 'react-icons/gi';
+import { BiError } from 'react-icons/bi';
 import styles from '@components/layout/Layout.module.scss';
 
 const NotFound = () => {
