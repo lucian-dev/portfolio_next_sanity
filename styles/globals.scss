@@ -128,7 +128,6 @@ a.btn {
 
 .btnS {
   display: inline-block;
-  font-family: var(--poppins);
   font-size: var(--lSize);
   font-weight: 700;
   line-height: 1;
@@ -153,6 +152,13 @@ img {
 
 ul {
   list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: var(--poppins);
 }
 
 .textCenter {
@@ -204,6 +210,25 @@ h5 {
   p {
     max-width: 550px;
     margin: auto;
+  }
+}
+
+.page404,
+.success {
+  height: calc(100vh - 150px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  svg {
+    width: 75px;
+    height: 75px;
+  }
+  h1 {
+    margin: 15px 0;
+  }
+  p {
+    font-weight: 700;
   }
 }
 

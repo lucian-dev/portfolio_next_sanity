@@ -26,7 +26,10 @@ const HomeContent = () => {
           Hello, <span>I&apos;M Lucian</span>
         </h1>
         <p>I am a Front-end Developer based in Bucharest, Romania.</p>
-        <p>I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.</p>
+        <p>
+          I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs,
+          Landing Pages.
+        </p>
         <Link href="/about">
           <a className="btnS">...more about me</a>
         </Link>

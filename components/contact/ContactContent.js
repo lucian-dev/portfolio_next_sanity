@@ -1,4 +1,5 @@
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import ContactForm from './ContactForm';
 import styles from './Contact.module.scss';
 
 const ContactContent = () => {
@@ -38,6 +39,7 @@ const ContactContent = () => {
           <a href="mailto:lucian.dev13@gmail.com">lucian.dev13[at]gmail.com</a>
         </div>
       </div>
+      <ContactForm />
     </div>
   );
 };
