@@ -7,9 +7,15 @@ const ContactForm = () => {
       method="POST"
       data-netlify="true"
       action="/success"
+      data-netlify-honeypot="bot-field"
       className={styles.form}
     >
-      <input type="hidden" name="contact" value="contact" />
+      <input type="hidden" name="form-name" value="contact" />
+      <p hidden>
+        <label>
+          Don’t fill this out: <input name="bot-field" />
+        </label>
+      </p>
       <div className={styles.formRow}>
         <div className={styles.formCol}>
           <input type="text" name="name" placeholder="*Your name..." required />
