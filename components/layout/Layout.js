@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import Image from 'next/image';
 import { useTheme } from 'next-themes';
 import Navbar from '@components/navbar/Navbar';
@@ -9,6 +10,18 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        />
+        <meta property="og:image" content="/preview_th.png" key="ogimage" />
+        <meta
+          name="description"
+          content="I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages."
+        />
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
       <Navbar />
       <main className={styles.mainWrapper}>
         <div className="switch-mode">
