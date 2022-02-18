@@ -84,6 +84,7 @@ export const allTestimonials = `*[_type == 'testimonial'] {
     }
   },
   authorProject,
+  authorTitle,
   text
 }`;
 

@@ -33,8 +33,10 @@
 }
 
 .authorInfo {
-  display: flex;
-  align-items: center;
+  div {
+    display: flex;
+    align-items: center;
+  }
   h5 {
     font-weight: normal;
   }
@@ -49,5 +51,11 @@
   }
   a:hover {
     color: var(--primaryColor);
+  }
+  span {
+    display: block;
+    font-size: var(--smSize);
+    line-height: 1;
+    margin-top: 5px;
   }
 }
