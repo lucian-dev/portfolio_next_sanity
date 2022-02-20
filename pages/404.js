@@ -14,7 +14,7 @@ const NotFound = () => {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [router]);
 
   return (
     <section className={styles.mainSection}>

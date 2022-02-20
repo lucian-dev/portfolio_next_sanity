@@ -14,7 +14,7 @@ const Success = () => {
     return () => {
       clearTimeout(timeout);
     };
-  }, []);
+  }, [router]);
 
   return (
     <>
