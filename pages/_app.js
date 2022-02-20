@@ -3,7 +3,6 @@ import Head from 'next/head';
 import Router from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import NProgress from 'nprogress';
-import GoogleAnalytics from '@components/GoogleAnalytics';
 import Layout from '@components/layout/Layout';
 import '@styles/globals.scss';
 import '@styles/nprogress.scss';
@@ -32,7 +31,6 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider storageKey="theme" defaultTheme="dark" enableColorScheme={false}>
         <Layout>
           <Component {...pageProps} />
-          {process.env.NODE_ENV === 'production' && <GoogleAnalytics />}
         </Layout>
       </ThemeProvider>
     </>
