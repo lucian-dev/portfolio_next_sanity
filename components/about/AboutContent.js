@@ -13,28 +13,20 @@ const AboutContent = () => {
       <div className={styles.content}>
         <div className={styles.info}>
           <p>
-            I build different types of websites like One-Page, Multi-Page, E-commerce, Portfolio,
-            Blogs, Landing Pages.
+            Since 2015 I&apos;m creating successful websites for different types of businesses,
+            especially in fields like wellness, legislation, education, and real estate.
           </p>
           <p>
-            Back in 2015, I started with HTML/CSS to develop websites for personal projects as well
-            as for certain local businesses.
+            I enjoy knowing my client&apos;s business, their goals, and how I can add value to their
+            sites to help them succeed.
           </p>
           <p>
-            In time I added into my front-end skills: CSS Flexbox/Grid, Sass, jQuery, Gulp, tools
-            that help me to build responsive layouts, animations, and gave me speed in developing
-            websites. I&apos;m also comfortable using Webpack, NPM, Git.
-          </p>
-          <p></p>
-          <p>
-            Then I discover WordPress, the most used CMS, which due to its flexibility and intuitive
-            dashboard, which helps my clients to easily manage the content of the website, I start
-            using it in most projects, making custom themes.
+            After understanding your project needs, I can use my experience to determine the right
+            tools and development methods. Usually, I like simple and efficient methods.
           </p>
           <p>
-            I have been able to enjoy the success of projects made in various fields with their
-            initiators, working both as a freelancer but also collaborating with web design agencies
-            such as{' '}
+            I have been able to enjoy the success of projects working both as a freelancer but also
+            collaborating with web design agencies such as{' '}
             <a href="https://quart.ro" target="_blank" rel="noreferrer noopener">
               Quart Agency
             </a>
@@ -53,14 +45,8 @@ const AboutContent = () => {
             , Creativ89.
           </p>
           <p>
-            Currently, loveship remains for JavaScript, React, Jamstack world, which I want to
-            explore as much as I can. I am a lifelong learner so apps like Udemy, Scrimba,
-            freeCodeCamp are my best companions in this journey.
-          </p>
-          <p>
-            If you&apos;d like to find out more about how I work or if you want to start a new
-            project, please <Link href="/contact">contact me</Link> and give me information about
-            the project you have in mind.
+            If you&apos;d like to start a successful project, look no more for a developer for your
+            website. Let&apos;s build together, <Link href="/contact">contact me</Link>.
           </p>
         </div>
       </div>

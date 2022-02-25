@@ -18,7 +18,8 @@
 
 .typed {
   font-size: var(--h3Size);
-  color: var(--primaryColor);
+  color: var(--secondaryColor);
+  font-weight: 700;
   i {
     font-style: normal;
   }
@@ -26,10 +27,12 @@
 
 .typedStrings {
   padding-left: 25px;
-  line-height: 1;
+  line-height: 1.2;
+  margin: 5px 0;
   span {
     white-space: pre;
     font-size: var(--h4Size);
-    color: var(--secondaryColor);
+    color: var(--primaryColor);
+    font-weight: 400;
   }
 }

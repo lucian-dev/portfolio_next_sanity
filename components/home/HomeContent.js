@@ -8,7 +8,7 @@ const HomeContent = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['display: flex;\nalign-items: center;\njustify-content: space-between;\n '],
+      strings: ['Tailored to your needs\nFast and Secure\nFully responsive\nBuilt to last\n '],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,
@@ -26,16 +26,13 @@ const HomeContent = () => {
           Hello, <span>I&apos;M Lucian</span>
         </h1>
         <p>I am a Front-end Developer based in Bucharest, Romania.</p>
-        <p>
-          I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs,
-          Landing Pages.
-        </p>
+        <p>Experienced at delivering successful websites for your online project.</p>
         <Link href="/about">
           <a className="btnS">...more about me</a>
         </Link>
       </div>
       <div className={styles.typed}>
-        <i>.content &#123;</i>
+        <i>#your website will be &#123;</i>
         <div className={styles.typedStrings}>
           <span ref={el}></span>
         </div>
