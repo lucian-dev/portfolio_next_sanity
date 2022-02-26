@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 import { capitalize } from '@utils/capitalize';
 import { urlFor } from '../../client';
 import { IoLinkOutline } from 'react-icons/io5';
@@ -7,10 +8,17 @@ import styles from './Projects.module.scss';
 
 const ProjectCard = ({ item }) => {
   return (
-    <div className={styles.lpCard}>
+    <motion.div
+      className={styles.lpCard}
+      layout
+      initial={{ y: '-100%', opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      exit={{ y: '-75%', opacity: 0 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 30, mass: 0.5 }}
+    >
       <Link href={`/projects/${item.slug.current}`}>
         <a className={styles.lpLink}>
-          <div className={styles.lpImgBig}>
+          <motion.div className={styles.lpImgBig}>
             <Image
               src={urlFor(item.image).url()}
               alt={item.title}
@@ -22,7 +30,7 @@ const ProjectCard = ({ item }) => {
               <IoLinkOutline />
               <h3>{item.title}</h3>
             </div>
-          </div>
+          </motion.div>
           <div className={styles.lpImgSm}>
             <span className={styles.category}>{capitalize(item.projectType)}</span>
             <Image
@@ -35,7 +43,7 @@ const ProjectCard = ({ item }) => {
           </div>
         </a>
       </Link>
-    </div>
+    </motion.div>
   );
 };
 

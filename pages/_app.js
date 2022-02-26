@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
+import { AnimatePresence } from 'framer-motion';
 import NProgress from 'nprogress';
 import Layout from '@components/layout/Layout';
 import '@styles/globals.scss';
@@ -32,7 +33,9 @@ function MyApp({ Component, pageProps }) {
       </Head>
       <ThemeProvider storageKey="theme" defaultTheme="dark" enableColorScheme={false}>
         <Layout>
-          <Component {...pageProps} />
+          <AnimatePresence exitBeforeEnter initial={false}>
+            <Component {...pageProps} />
+          </AnimatePresence>
         </Layout>
       </ThemeProvider>
     </>

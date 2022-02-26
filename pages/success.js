@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { BsCheck2Circle } from 'react-icons/bs';
 import styles from '@components/layout/Layout.module.scss';
 
@@ -21,7 +22,13 @@ const Success = () => {
       <Head>
         <title>Message Sent - Lucian-DEV</title>
       </Head>
-      <section className={styles.mainSection}>
+      <motion.section
+        className={styles.mainSection}
+        initial={{ x: '-100%', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: 'spring', bounce: 0.6, duration: 0.5, damping: 14 }}
+        exit={{ opacity: 0 }}
+      >
         <div className={styles.displayContent}>
           <div className={styles.container}>
             <div className="success">
@@ -33,7 +40,7 @@ const Success = () => {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

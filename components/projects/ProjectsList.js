@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import { client } from '../../client';
 import { categories, filteredProjects } from '@utils/data';
 import ProjectCard from '@components/projects/ProjectCard';
@@ -50,8 +51,10 @@ const ProjectsList = ({ projects }) => {
         })}
       </ul>
       <div className={styles.projectsGrid}>
-        {activeProjects &&
-          activeProjects.map((project) => <ProjectCard key={project._id} item={project} />)}
+        <AnimatePresence>
+          {activeProjects &&
+            activeProjects.map((project) => <ProjectCard key={project._id} item={project} />)}
+        </AnimatePresence>
       </div>
     </div>
   );

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Image from 'next/image';
+import { AnimatePresence, motion } from 'framer-motion';
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { AiOutlineCodeSandbox } from 'react-icons/ai';
@@ -8,6 +9,26 @@ import { menu } from '../../utils/data';
 import ActiveLink from './ActiveLink';
 import thumb from '../../public/th_lucian.jpg';
 import styles from './Navbar.module.scss';
+
+const navVariants = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.2,
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+const linkVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+  },
+};
 
 const Nav = () => {
   const [burger, setBurger] = useState(false);
@@ -67,21 +88,34 @@ const Nav = () => {
           )}
         </div>
       </nav>
-      {burger && (
-        <div className={styles.burgerMenu}>
-          <div className={styles.burgerInner}>
-            <ul className={styles.navigationBurger} initial="hidden" animate="visible">
-              {menu.map((item) => (
-                <li key={item.id}>
-                  <ActiveLink href={item.path}>
-                    <a onClick={handleClick}>{item.page}</a>
-                  </ActiveLink>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      )}
+      <AnimatePresence>
+        {burger && (
+          <motion.div
+            className={styles.burgerMenu}
+            initial={{ x: '-100%', opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ type: 'spring', duration: 0.3 }}
+            exit={{ x: '-100%', opacity: 0 }}
+          >
+            <motion.div className={styles.burgerInner}>
+              <motion.ul
+                className={styles.navigationBurger}
+                variants={navVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {menu.map((item) => (
+                  <motion.li key={item.id} variants={linkVariants}>
+                    <ActiveLink href={item.path}>
+                      <a onClick={handleClick}>{item.page}</a>
+                    </ActiveLink>
+                  </motion.li>
+                ))}
+              </motion.ul>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 };

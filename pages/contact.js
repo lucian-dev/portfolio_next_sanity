@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 import { client } from '../client';
 import { featuredProjects, allTestimonials } from '@utils/data';
 import ContactContent from '@components/contact/ContactContent';
@@ -12,7 +13,13 @@ const Contact = ({ lastProjects, testimonials }) => {
       <Head>
         <title>Contact - Lucian-DEV</title>
       </Head>
-      <section className={styles.mainSection}>
+      <motion.section
+        className={styles.mainSection}
+        initial={{ x: '-100%', opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ type: 'spring', bounce: 0.6, duration: 0.5, damping: 14 }}
+        exit={{ opacity: 0 }}
+      >
         <div className={styles.displayContent}>
           <div className={styles.container}>
             <ContactContent />
@@ -20,7 +27,7 @@ const Contact = ({ lastProjects, testimonials }) => {
             <Testimonials testimonials={testimonials} />
           </div>
         </div>
-      </section>
+      </motion.section>
     </>
   );
 };

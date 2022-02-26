@@ -6,7 +6,7 @@
   margin-top: 50px;
 }
 
-// filters
+// Filters
 .filterProducts {
   display: flex;
   align-items: center;
@@ -167,6 +167,7 @@
 }
 
 .info {
+  padding-right: 25px;
   span {
     display: block;
     font-family: var(--poppins);
@@ -189,10 +190,10 @@
   }
 }
 
-.imgBack {
+.imgBackWrapper {
   position: absolute;
   top: 50%;
-  width: 525px;
+  width: 425px;
   height: 400px;
   right: 0;
   transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
@@ -202,12 +203,19 @@
   @media (min-width: 600px) {
     transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
       translate(-10px, -50%);
+    width: 525px;
     height: 650px;
   }
 }
 
+.imgBackInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .imgFront {
-  position: absolute;
+  position: relative;
   left: 0;
   top: 50%;
   width: 100%;

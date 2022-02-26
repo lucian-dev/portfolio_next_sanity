@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { client } from '../client';
 import { allTestimonials, featuredProjects } from '@utils/data';
 import HomeContent from '@components/home/HomeContent';
@@ -7,7 +8,13 @@ import styles from '@components/layout/Layout.module.scss';
 
 export default function Home({ lastProjects, testimonials }) {
   return (
-    <section className={styles.mainSection}>
+    <motion.section
+      className={styles.mainSection}
+      initial={{ x: '-100%', opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ type: 'spring', bounce: 0.6, duration: 0.5, damping: 14 }}
+      exit={{ opacity: 0 }}
+    >
       <div className={styles.displayContent}>
         <div className={styles.container}>
           <HomeContent />
@@ -15,7 +22,7 @@ export default function Home({ lastProjects, testimonials }) {
           <Testimonials testimonials={testimonials} />
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
