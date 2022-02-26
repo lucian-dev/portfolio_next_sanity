@@ -221,10 +221,10 @@
   width: 100%;
   max-width: 125px;
   height: 250px;
-  border-top: 16px solid var(--bodyColor);
-  border-bottom: 16px solid var(--bodyColor);
-  border-left: 8px solid var(--bodyColor);
-  border-right: 8px solid var(--bodyColor);
+  border-top: 16px solid var(--wrapperColor);
+  border-bottom: 16px solid var(--wrapperColor);
+  border-left: 8px solid var(--wrapperColor);
+  border-right: 8px solid var(--wrapperColor);
   border-radius: 20px;
   box-shadow: var(--boxShadowAlt);
   transform: translate(5px, -50%);
