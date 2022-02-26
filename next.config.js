@@ -3,5 +3,4 @@ module.exports = {
   images: {
     domains: ['cdn.sanity.io'],
   },
-  experimental: { esmExternals: true },
 };
