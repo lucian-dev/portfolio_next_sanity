@@ -34,10 +34,9 @@ const Nav = () => {
   const [burger, setBurger] = useState(false);
 
   const handleClick = () => setBurger(!burger);
-
   return (
     <>
-      <nav className={`${burger ? `${styles.activeBurger} ${styles.nav}` : `${styles.nav}`}`}>
+      <nav className={burger ? `${styles.activeBurger} ${styles.nav}` : styles.nav}>
         <div className={styles.head}>
           <div className={styles.thumbnail}>
             <Image

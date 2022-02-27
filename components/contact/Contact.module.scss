@@ -16,7 +16,7 @@
 
 .social,
 .email {
-  width: 50%;
+  width: 100%;
   text-align: center;
   h5 {
     margin: 15px auto;
@@ -41,6 +41,9 @@
     &:hover {
       fill: var(--primaryColor);
     }
+  }
+  @media (min-width: 550px) {
+    width: 50%;
   }
 }
 

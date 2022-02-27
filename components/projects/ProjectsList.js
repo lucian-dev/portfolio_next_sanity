@@ -51,7 +51,7 @@ const ProjectsList = ({ projects }) => {
         })}
       </ul>
       <div className={styles.projectsGrid}>
-        <AnimatePresence exitBeforeEnter>
+        <AnimatePresence>
           {activeProjects &&
             activeProjects.map((project) => <ProjectCard key={project._id} item={project} />)}
         </AnimatePresence>
