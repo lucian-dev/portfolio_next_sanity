@@ -14,7 +14,7 @@ const AboutContent = () => {
         <div className={styles.info}>
           <p>
             Since 2015 I&apos;m creating successful websites for different types of businesses,
-            especially in fields like wellness, legislation, education, and real estate.
+            especially in fields like wellness, laws, education, and real estate.
           </p>
           <p>
             I enjoy knowing my client&apos;s business, their goals, and how I can add value to their
@@ -47,6 +47,10 @@ const AboutContent = () => {
           <p>
             If you&apos;d like to start a successful project, look no more for a developer for your
             website. Let&apos;s build together, <Link href="/contact">contact me</Link>.
+          </p>
+          <p>
+            Current stack__
+            <span>#css #js #react #next-js #wordpress #netlify</span>
           </p>
         </div>
       </div>

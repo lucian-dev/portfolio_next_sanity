@@ -17,4 +17,8 @@
   p:not(:last-of-type) {
     margin-bottom: 25px;
   }
+  span {
+    display: block;
+    font-weight: 700;
+  }
 }
