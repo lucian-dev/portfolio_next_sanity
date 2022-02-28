@@ -1,6 +1,8 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { GiClick } from 'react-icons/gi';
 import { capitalize } from '@utils/capitalize';
 import { urlFor } from '../../client';
 import styles from './Projects.module.scss';
@@ -9,6 +11,8 @@ const placeholder =
   'data:image/webp;base64,UklGRlACAABXRUJQVlA4WAoAAAAgAAAAPQMAbgIASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOEwRAAAALz2DmwAHUKMa1aj/gYjofwAA';
 
 const ProjectItem = ({ project }) => {
+  const [tap, setTap] = useState(false);
+
   return (
     <>
       {project.map((item) => (
@@ -46,7 +50,12 @@ const ProjectItem = ({ project }) => {
               animate={{ x: 0 }}
               transition={{ type: 'spring' }}
             >
-              <div className={styles.imgFront}>
+              <motion.div
+                className={tap ? `${styles.imgFront} ${styles.onTap}` : `${styles.imgFront}`}
+                onTapStart={() => setTap(true)}
+                onTap={() => setTap(false)}
+              >
+                <GiClick />
                 <Image
                   src={urlFor(item.image).url()}
                   alt={item.title}
@@ -54,7 +63,7 @@ const ProjectItem = ({ project }) => {
                   placeholder="blur"
                   blurDataURL={placeholder}
                 />
-              </div>
+              </motion.div>
               <div className={styles.imgBackWrapper}>
                 <div className={styles.imgBackInner}>
                   <Image

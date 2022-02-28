@@ -230,12 +230,43 @@
   transform: translate(5px, -50%);
   overflow: hidden;
   z-index: 3;
+  transition: all 0.4s ease-in-out;
   img {
     object-fit: cover;
   }
   @media (min-width: 600px) {
     max-width: 175px;
     height: 325px;
-    transform: translate(25px, -50%);
+    transform: translate(0, -50%);
+  }
+  svg {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 18px;
+    height: 18px;
+    z-index: 3;
+    animation-name: pulse;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+}
+
+.onTap {
+  max-width: 375px;
+  height: 200px;
+  border-top: 8px solid var(--wrapperColor);
+  border-bottom: 8px solid var(--wrapperColor);
+  border-left: 16px solid var(--wrapperColor);
+  border-right: 16px solid var(--wrapperColor);
+  img {
+    animation-name: thAnim;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  svg {
+    display: none;
   }
 }
