@@ -17,12 +17,20 @@ const AboutContent = () => {
             especially in fields like wellness, laws, education, and real estate.
           </p>
           <p>
-            I enjoy knowing my client&apos;s business, their goals, and how I can add value to their
-            sites to help them succeed.
+            I enjoy knowing your business, your goals, and how I can add value to your website to
+            help you succeed.
           </p>
           <p>
             After understanding your project needs, I can use my experience to determine the right
-            tools and development methods. Usually, I like simple and efficient methods.
+            tools and development methods. Usually, simple and efficient methods work best.
+          </p>
+          <p>
+            I like working with Jamstack arhitecture (React, Next-JS) for better experience,
+            performance, scalability.
+          </p>
+          <p>
+            I also use WordPress, due to its flexibility and intuitive dashboard. The WordPress
+            sites I create are bespoke, specifically for the end-user.
           </p>
           <p>
             I have been able to enjoy the success of projects working both as a freelancer but also
