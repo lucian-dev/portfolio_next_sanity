@@ -167,7 +167,6 @@
 }
 
 .info {
-  padding-right: 25px;
   span {
     display: block;
     font-family: var(--poppins);
@@ -179,6 +178,9 @@
   }
   .linkProject {
     margin-top: 25px;
+  }
+  @media (min-width: 768px) {
+    padding-right: 25px;
   }
 }
 
@@ -193,16 +195,32 @@
 .imgBackWrapper {
   position: absolute;
   top: 50%;
-  width: 425px;
+  width: 100%;
   height: 400px;
   right: 0;
-  transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
-    translate(0, -50%);
   box-shadow: var(--boxShadowAlt);
+  transform: translate(0, -50%);
   z-index: 1;
+  img {
+    object-fit: cover;
+    object-position: top;
+    animation-name: thAnim;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  @media (min-width: 500px) {
+    width: 425px;
+    transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
+      translate(0, -50%);
+    img {
+      object-fit: inherit;
+      animation: none;
+    }
+  }
   @media (min-width: 600px) {
     transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
-      translate(-10px, -50%);
+      translate(25px, -50%);
     width: 525px;
     height: 650px;
   }
@@ -215,6 +233,7 @@
 }
 
 .imgFront {
+  display: none;
   position: relative;
   left: 0;
   top: 50%;
@@ -227,17 +246,12 @@
   border-right: 8px solid var(--wrapperColor);
   border-radius: 20px;
   box-shadow: var(--boxShadowAlt);
-  transform: translate(5px, -50%);
+  transform: translateY(-50%);
   overflow: hidden;
   z-index: 3;
   transition: all 0.4s ease-in-out;
   img {
     object-fit: cover;
-  }
-  @media (min-width: 600px) {
-    max-width: 175px;
-    height: 325px;
-    transform: translate(0, -50%);
   }
   svg {
     position: absolute;
@@ -250,6 +264,13 @@
     animation-duration: 2s;
     animation-fill-mode: both;
     animation-iteration-count: infinite;
+  }
+  @media (min-width: 500px) {
+    display: block;
+  }
+  @media (min-width: 600px) {
+    max-width: 175px;
+    height: 325px;
   }
 }
 
