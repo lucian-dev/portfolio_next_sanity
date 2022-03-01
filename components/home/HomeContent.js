@@ -8,7 +8,9 @@ const HomeContent = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ['Tailored to your needs\nFast and Secure\nFully responsive\nBuilt to last\n '],
+      strings: [
+        'Tailored to your needs\nFast and Secure\nFully responsive\nSEO Ready\nBuilt to last\n ',
+      ],
       startDelay: 300,
       typeSpeed: 100,
       backSpeed: 100,

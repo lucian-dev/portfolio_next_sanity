@@ -7,13 +7,14 @@ const ContactForm = () => {
       method="POST"
       data-netlify="true"
       action="/success"
-      data-netlify-honeypot="bot-field"
+      netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
       className={styles.form}
     >
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
         <label>
-          Don’t fill this out: <input name="bot-field" />
+          Don&apos;t fill this out: <input name="bot-field" />
         </label>
       </p>
       <div className={styles.formRow}>
@@ -30,6 +31,7 @@ const ContactForm = () => {
       <div className={styles.formRowFull}>
         <textarea name="message" placeholder="*Your message..." required></textarea>
       </div>
+      <div data-netlify-recaptcha="true"></div>
       <div className="textCenter">
         <button type="submit" className="btnS">
           SEND MESSAGE
