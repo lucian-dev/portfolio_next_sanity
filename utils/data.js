@@ -92,6 +92,7 @@ export const projectDetail = (slug) => `*[slug.current == "${slug}"] {
   _id,
   title,
   slug,
+  description,
   projectType,
   tech,
   maintenance,

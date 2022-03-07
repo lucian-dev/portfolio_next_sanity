@@ -30,6 +30,7 @@ const ProjectItem = ({ project }) => {
               <p>{capitalize(item.maintenance)}</p>
               <span>Collab:</span>
               <p>{item.collab}</p>
+              {item.description && <p>{item.description}</p>}
               <a
                 href={item.projectUrl}
                 className={`btn ${styles.linkProject}`}

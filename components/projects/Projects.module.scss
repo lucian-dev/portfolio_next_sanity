@@ -162,7 +162,7 @@
 .gridProject {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(375px, 100%), 1fr));
-  gap: 15px;
+  gap: 25px;
   align-items: center;
 }
 
@@ -173,14 +173,15 @@
     font-weight: bold;
     color: var(--primaryColor);
   }
-  span:not(:first-of-type) {
-    margin-top: 15px;
+  p:not(:last-of-type) {
+    margin-bottom: 15px;
   }
+
   .linkProject {
-    margin-top: 25px;
+    margin-top: 50px;
   }
   @media (min-width: 768px) {
-    padding-right: 25px;
+    padding-right: 100px;
   }
 }
 
@@ -201,22 +202,10 @@
   box-shadow: var(--boxShadowAlt);
   transform: translate(0, -50%);
   z-index: 1;
-  img {
-    object-fit: cover;
-    object-position: top;
-    animation-name: thAnim;
-    animation-duration: 40s;
-    animation-fill-mode: both;
-    animation-iteration-count: infinite;
-  }
   @media (min-width: 500px) {
     width: 425px;
     transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
       translate(0, -50%);
-    img {
-      object-fit: inherit;
-      animation: none;
-    }
   }
   @media (min-width: 600px) {
     transform: matrix3d(0.9, 0.12, 0.34, -0.0002, 0, 1, 0, 0, -0.34, 0, 0.94, 0, 1, 0, 10, 1)
@@ -230,6 +219,20 @@
   position: relative;
   width: 100%;
   height: 100%;
+  img {
+    object-fit: cover;
+    object-position: top;
+    animation-name: thAnim;
+    animation-duration: 40s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+  @media (min-width: 500px) {
+    img {
+      object-fit: inherit;
+      animation: none;
+    }
+  }
 }
 
 .imgFront {
