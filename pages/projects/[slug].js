@@ -34,7 +34,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const project = await client.fetch(projectDetail(`${slug}`));
   const testimonials = await client.fetch(allTestimonials);
 
-  return { props: { project, testimonials } };
+  return { props: { project, testimonials }, revalidate: 30 };
 };
 
 export const getStaticPaths = async () => {

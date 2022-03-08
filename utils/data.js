@@ -88,19 +88,22 @@ export const allTestimonials = `*[_type == 'testimonial'] {
   text
 }`;
 
-export const projectDetail = (slug) => `*[slug.current == "${slug}"] {
-  _id,
-  title,
-  slug,
-  description,
-  projectType,
-  tech,
-  maintenance,
-  collab,
-  projectUrl,
-  image {
-    asset -> {
-      url
+export const projectDetail = (slug) => {
+  const query = `*[slug.current == "${slug}"] {
+    _id,
+    title,
+    slug,
+    description,
+    projectType,
+    tech,
+    maintenance,
+    collab,
+    projectUrl,
+    image {
+      asset -> {
+        url
+      }
     }
-  }
-}`;
+  }`;
+  return query;
+};
