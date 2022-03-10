@@ -40,10 +40,13 @@ const ArticleCard = ({ article }) => {
               blurDataURL={placeholder}
             />
           </div>
-          <div className={styles.cardMeta}>
-            <span>{article.articleDate}</span>
+          <div className={styles.cardInfo}>
+            <div className={styles.cardMeta}>
+              <span>{article.articleDate}</span>
+              <span className={styles.cardMetaCat}>{article.category}</span>
+            </div>
+            <h4>{article.title}</h4>
           </div>
-          <h4>{article.title}</h4>
         </a>
       </Link>
     </motion.div>

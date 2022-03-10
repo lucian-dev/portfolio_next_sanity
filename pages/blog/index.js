@@ -22,7 +22,7 @@ const Blog = ({ articles }) => {
           <div className={styles.container}>
             <div className="mainTitle textCenter">
               <h1>
-                Snippets <span>asasas</span>
+                Some <span>articles</span>
               </h1>
             </div>
             <ArticlesList articles={articles} />

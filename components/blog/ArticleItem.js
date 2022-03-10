@@ -23,7 +23,7 @@ const ArticleItem = ({ article, related }) => {
           <h3>Related Articles</h3>
           {related
             .filter((item) => item.category === category)
-            .slice(0, 3)
+            .slice(0, 2)
             .map((article) => (
               <ArticleCard key={article._id} article={article} />
             ))}

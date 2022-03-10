@@ -85,12 +85,12 @@
     transition: all 0.2s ease-in-out;
   }
   &::before {
-    width: 1px;
+    width: 2px;
     height: 25px;
   }
   &::after {
     width: 75px;
-    height: 1px;
+    height: 2px;
   }
   &:hover {
     &:after {
@@ -107,6 +107,9 @@
   &::after {
     background: #f0db4f;
   }
+  .cardMetaCat {
+    color: #f0db4f;
+  }
 }
 
 .reactCard {
@@ -114,25 +117,37 @@
   &::after {
     background: #61dbfb;
   }
+  .cardMetaCat {
+    color: #61dbfb;
+  }
 }
 
 .nextCard {
   &::before,
   &::after {
-    background: #000;
+    background: var(--primaryColor);
+  }
+  .cardMetaCat {
+    color: var(--primaryColor);
   }
 }
 
 .cardImage {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 250px;
+}
+
+.cardInfo {
+  padding: 25px 15px;
+  box-shadow: var(--boxShadowAlt);
 }
 
 .cardMeta {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  padding: 5px 0;
+  padding-bottom: 15px;
   font-size: var(--smSize);
 }
 
