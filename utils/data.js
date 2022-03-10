@@ -21,7 +21,7 @@ export const menu = [
   },
 ];
 
-export const categories = [
+export const projectCategories = [
   {
     id: 1,
     name: 'Multi-Page',
@@ -35,6 +35,32 @@ export const categories = [
     name: 'E-Commerce',
   },
 ];
+
+export const articleCategories = [
+  {
+    id: 1,
+    name: 'HTML',
+  },
+  {
+    id: 2,
+    name: 'CSS',
+  },
+  {
+    id: 3,
+    name: 'JavaScript',
+  },
+  {
+    id: 4,
+    name: 'React-JS',
+  },
+  {
+    id: 5,
+    name: 'Next-JS',
+  },
+];
+
+export const placeholder =
+  'data:image/webp;base64,UklGRlACAABXRUJQVlA4WAoAAAAgAAAAPQMAbgIASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOEwRAAAALz2DmwAHUKMa1aj/gYjofwAA';
 
 export const allProjects = `*[_type == 'project'] {
   _id,
@@ -104,6 +130,52 @@ export const projectDetail = (slug) => {
         url
       }
     }
+  }`;
+  return query;
+};
+
+export const allArticles = `*[_type == 'article'] {
+  _id,
+  title,
+  slug,
+  featuredImage {
+    asset -> {
+      url
+    }
+  },
+  category,
+  articleDate,
+}`;
+
+export const filteredArticles = (category) => {
+  const query = `*[_type == "article" && category == "${category}"] {
+    _id,
+    title,
+    slug,
+    featuredImage {
+      asset -> {
+        url
+      }
+    },
+    category,
+    articleDate,
+  }`;
+  return query;
+};
+
+export const singleArticle = (slug) => {
+  const query = `*[slug.current == "${slug}"] {
+    _id,
+    title,
+    slug,
+    featuredImage {
+      asset -> {
+        url
+      }
+    },
+    body,
+    category,
+    articleDate,
   }`;
   return query;
 };

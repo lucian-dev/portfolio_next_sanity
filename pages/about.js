@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { client } from '../client';
+import { client } from 'client';
 import { featuredProjects, allTestimonials } from '@utils/data';
 import AboutContent from '@components/about/AboutContent';
 import LastProjects from '@components/projects/LastProjects';

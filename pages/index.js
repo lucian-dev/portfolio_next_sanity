@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { client } from '../client';
+import { client } from 'client';
 import { allTestimonials, featuredProjects } from '@utils/data';
 import HomeContent from '@components/home/HomeContent';
 import LastProjects from '@components/projects/LastProjects';

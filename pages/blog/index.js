@@ -1,16 +1,15 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { client } from 'client';
-import { allProjects, allTestimonials } from '@utils/data';
-import ProjectsList from '@components/projects/ProjectsList';
-import Testimonials from '@components/testimonials/Testimonials';
+import { allArticles } from '@utils/data';
+import ArticlesList from '@components/blog/ArticlesList';
 import styles from '@components/layout/Layout.module.scss';
 
-const Projects = ({ projects, testimonials }) => {
+const Blog = ({ articles }) => {
   return (
     <>
       <Head>
-        <title>Projects - Lucian-DEV</title>
+        <title>Blog - Lucian-DEV</title>
       </Head>
       <motion.section
         className={styles.mainSection}
@@ -23,11 +22,10 @@ const Projects = ({ projects, testimonials }) => {
           <div className={styles.container}>
             <div className="mainTitle textCenter">
               <h1>
-                Selected <span>projects</span>
+                Snippets <span>asasas</span>
               </h1>
             </div>
-            <ProjectsList projects={projects} />
-            <Testimonials testimonials={testimonials} />
+            <ArticlesList articles={articles} />
           </div>
         </div>
       </motion.section>
@@ -35,13 +33,12 @@ const Projects = ({ projects, testimonials }) => {
   );
 };
 
-export default Projects;
-
 export const getStaticProps = async () => {
-  const projects = await client.fetch(allProjects);
-  const testimonials = await client.fetch(allTestimonials);
+  const articles = await client.fetch(allArticles);
 
   return {
-    props: { projects, testimonials },
+    props: { articles },
   };
 };
+
+export default Blog;

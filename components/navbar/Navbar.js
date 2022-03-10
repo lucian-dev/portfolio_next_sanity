@@ -5,9 +5,9 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { IoMdClose } from 'react-icons/io';
 import { AiOutlineCodeSandbox } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
-import { menu } from '../../utils/data';
+import { menu } from '@utils/data';
 import ActiveLink from './ActiveLink';
-import thumb from '../../public/th_lucian.jpg';
+import thumb from '/public/th_lucian.jpg';
 import styles from './Navbar.module.scss';
 
 const navVariants = {

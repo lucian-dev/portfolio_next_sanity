@@ -1,16 +1,15 @@
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { client } from 'client';
-import { allProjects, projectDetail, allTestimonials } from '@utils/data';
-import ProjectItem from '@components/projects/ProjectItem';
-import Testimonials from '@components/testimonials/Testimonials';
+import { allArticles, singleArticle } from '@utils/data';
+import ArticleItem from '@components/blog/ArticleItem';
 import styles from '@components/layout/Layout.module.scss';
 
-const ProjectPage = ({ project, testimonials }) => {
+const Article = ({ article, related }) => {
   return (
     <>
       <Head>
-        <title>Project - {project[0].title}</title>
+        <title>Article - {article[0].title}</title>
       </Head>
       <motion.section
         className={styles.mainSection}
@@ -21,8 +20,7 @@ const ProjectPage = ({ project, testimonials }) => {
       >
         <div className={styles.displayContent}>
           <div className={styles.container}>
-            <ProjectItem project={project} />
-            <Testimonials testimonials={testimonials} />
+            <ArticleItem article={article} related={related} />
           </div>
         </div>
       </motion.section>
@@ -31,20 +29,20 @@ const ProjectPage = ({ project, testimonials }) => {
 };
 
 export const getStaticProps = async ({ params: { slug } }) => {
-  const project = await client.fetch(projectDetail(`${slug}`));
-  const testimonials = await client.fetch(allTestimonials);
+  const article = await client.fetch(singleArticle(`${slug}`));
+  const related = await client.fetch(allArticles);
 
-  return { props: { project, testimonials } };
+  return { props: { article, related }, revalidate: 10 };
 };
 
 export const getStaticPaths = async () => {
-  const projects = await client.fetch(allProjects);
+  const articles = await client.fetch(allArticles);
 
-  const paths = projects.map((project) => ({
-    params: { slug: project.slug.current },
+  const paths = articles.map((article) => ({
+    params: { slug: article.slug.current },
   }));
 
   return { paths, fallback: false };
 };
 
-export default ProjectPage;
+export default Article;

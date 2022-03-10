@@ -1,0 +1,23 @@
+// Filters
+.filterProducts {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+  @media (min-width: 550px) {
+    flex-direction: row;
+  }
+  li {
+    position: relative;
+    padding: 10px;
+    @media (min-width: 550px) {
+      padding: 0 10px;
+    }
+  }
+}
+
+.filterArticles {
+  li {
+    padding: 5px 0;
+  }
+}

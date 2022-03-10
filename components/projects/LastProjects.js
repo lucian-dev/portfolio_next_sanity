@@ -11,7 +11,7 @@ const LastProjects = ({ lastProjects }) => {
       </div>
       <div className={styles.projectsGrid}>
         {lastProjects.map((project) => (
-          <ProjectCard key={project._id} item={project} />
+          <ProjectCard key={project._id} project={project} />
         ))}
       </div>
     </div>
