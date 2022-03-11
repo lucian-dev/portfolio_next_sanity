@@ -23,6 +23,9 @@
 .sidebar {
   width: 100%;
   @media (min-width: 992px) {
+    position: sticky;
+    top: 100px;
+    align-self: start;
     width: 25%;
     padding-left: 25px;
     text-align: right;

@@ -1,4 +1,3 @@
-import StickyBox from 'react-sticky-box';
 import { motion } from 'framer-motion';
 import styles from './Blog.module.scss';
 
@@ -10,9 +9,7 @@ const Sidebar = ({ children }) => {
       animate={{ x: 0 }}
       transition={{ type: 'spring' }}
     >
-      <StickyBox offsetTop={100} offsetBottom={0}>
-        {children}
-      </StickyBox>
+      {children}
     </motion.div>
   );
 };
