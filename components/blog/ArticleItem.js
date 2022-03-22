@@ -1,14 +1,27 @@
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import BlockContent from '@sanity/block-content-to-react';
+import { RiArrowGoBackLine } from 'react-icons/ri';
+import { TiSocialFacebook, TiSocialTwitter, TiSocialLinkedin } from 'react-icons/ti';
+import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 'react-share';
 import Sidebar from './Sidebar';
 import ArticleCard from './ArticleCard';
 import styles from './Blog.module.scss';
 
+const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
+
 const ArticleItem = ({ article, related }) => {
+  const router = useRouter();
   const { title, body, category } = article[0];
 
   return (
     <div className={styles.rowArticles}>
       <div className={styles.articleContent}>
+        <Link href="/blog">
+          <a className={styles.backIcon}>
+            <RiArrowGoBackLine />
+          </a>
+        </Link>
         <div className="mainTitle">
           <h1>{title}</h1>
         </div>
@@ -17,6 +30,22 @@ const ArticleItem = ({ article, related }) => {
           projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
           dataset="production"
         />
+        <div className={styles.social}>
+          <span>Share:</span>
+          <FacebookShareButton url={baseUrl + router.asPath}>
+            <TiSocialFacebook />
+          </FacebookShareButton>
+          <TwitterShareButton
+            url={baseUrl + router.asPath}
+            title={title}
+            hashtags={['dev-articles', `${title}`]}
+          >
+            <TiSocialTwitter />
+          </TwitterShareButton>
+          <LinkedinShareButton url={baseUrl + router.asPath} title={title}>
+            <TiSocialLinkedin />
+          </LinkedinShareButton>
+        </div>
       </div>
       <Sidebar>
         <div className={styles.sidebarCol}>

@@ -32,7 +32,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
   const article = await client.fetch(singleArticle(`${slug}`));
   const related = await client.fetch(allArticles);
 
-  return { props: { article, related }, revalidate: 10 };
+  return { props: { article, related } };
 };
 
 export const getStaticPaths = async () => {
@@ -42,7 +42,7 @@ export const getStaticPaths = async () => {
     params: { slug: article.slug.current },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export default Article;

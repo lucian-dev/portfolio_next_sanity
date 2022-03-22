@@ -44,7 +44,7 @@ export const getStaticPaths = async () => {
     params: { slug: project.slug.current },
   }));
 
-  return { paths, fallback: false };
+  return { paths, fallback: 'blocking' };
 };
 
 export default ProjectPage;

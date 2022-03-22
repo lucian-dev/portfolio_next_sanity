@@ -157,6 +157,9 @@
 .articleContent {
   width: 100%;
   margin-bottom: 50px;
+  h1 {
+    margin-top: 15px;
+  }
   h2,
   h3,
   h4,
@@ -181,6 +184,33 @@
     margin: 25px auto;
     width: 100%;
     max-width: 768px;
+  }
+  .social {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    &:before {
+      content: '';
+      display: inline-block;
+      width: 75px;
+      height: 1px;
+      background-color: var(--primaryColor);
+      margin-right: 15px;
+    }
+    span {
+      line-height: 1;
+    }
+    svg {
+      display: block;
+      width: 22px;
+      height: 22px;
+      margin: 0 5px;
+      fill: var(--secondaryColor);
+      transition: all 0.3s ease-in-out;
+    }
+    svg:hover {
+      fill: var(--primaryColor);
+    }
   }
   @media (min-width: 992px) {
     width: 75%;
