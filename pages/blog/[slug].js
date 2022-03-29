@@ -1,15 +1,12 @@
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { client, urlFor } from 'client';
 import HeadSeo from '@components/head/HeadSeo';
+import siteMetadata from '@utils/siteMetadata';
 import { allArticles, singleArticle } from '@utils/data';
 import ArticleItem from '@components/blog/ArticleItem';
 import styles from '@components/layout/Layout.module.scss';
-import siteMetadata from '@utils/siteMetadata';
 
 const Article = ({ article, related }) => {
-  console.log(article);
-
   return (
     <>
       <HeadSeo
