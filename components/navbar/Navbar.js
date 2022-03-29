@@ -6,6 +6,7 @@ import { IoMdClose } from 'react-icons/io';
 import { AiOutlineCodeSandbox } from 'react-icons/ai';
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import { menu } from '@utils/data';
+import siteMetadata from '@utils/siteMetadata';
 import ActiveLink from './ActiveLink';
 import thumb from '/public/th_lucian.jpg';
 import styles from './Navbar.module.scss';
@@ -65,17 +66,13 @@ const Nav = () => {
           ))}
         </ul>
         <div className={styles.social}>
-          <a
-            href="https://www.linkedin.com/in/lucian-dev/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a href={siteMetadata.linkedin} target="_blank" rel="noreferrer noopener">
             <FaLinkedinIn />
           </a>
-          <a href="https://github.com/lucian-dev" target="_blank" rel="noreferrer noopener">
+          <a href={siteMetadata.github} target="_blank" rel="noreferrer noopener">
             <FaGithub />
           </a>
-          <a href="https://codesandbox.io/u/lucian-dev" target="_blank" rel="noreferrer noopener">
+          <a href={siteMetadata.codesandbox} target="_blank" rel="noreferrer noopener">
             <AiOutlineCodeSandbox />
           </a>
         </div>

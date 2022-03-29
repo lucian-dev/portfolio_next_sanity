@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import { AnimatePresence } from 'framer-motion';
@@ -27,18 +26,13 @@ function MyApp({ Component, pageProps }) {
   }, [router.events]);
 
   return (
-    <>
-      <Head>
-        <title>Lucian-DEV -- Freelance Front-end Developer</title>
-      </Head>
-      <ThemeProvider storageKey="theme" defaultTheme="dark" enableColorScheme={false}>
-        <Layout>
-          <AnimatePresence exitBeforeEnter initial={false}>
-            <Component {...pageProps} />
-          </AnimatePresence>
-        </Layout>
-      </ThemeProvider>
-    </>
+    <ThemeProvider storageKey="theme" defaultTheme="dark" enableColorScheme={false}>
+      <Layout>
+        <AnimatePresence exitBeforeEnter initial={false}>
+          <Component {...pageProps} />
+        </AnimatePresence>
+      </Layout>
+    </ThemeProvider>
   );
 }
 

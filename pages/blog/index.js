@@ -1,16 +1,20 @@
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { client } from 'client';
 import { allArticles } from '@utils/data';
+import siteMetadata from '@utils/siteMetadata';
+import HeadSeo from '@components/head/HeadSeo';
 import ArticlesList from '@components/blog/ArticlesList';
 import styles from '@components/layout/Layout.module.scss';
 
 const Blog = ({ articles }) => {
   return (
     <>
-      <Head>
-        <title>Blog - Lucian-DEV</title>
-      </Head>
+      <HeadSeo
+        title={`Articles -- Lucian-DEV`}
+        description={`Freelance, Front-End stuff, Snippets...`}
+        canonicalUrl={`${siteMetadata.siteUrl}/blog`}
+        ogType={'website'}
+      />
       <motion.section
         className={styles.mainSection}
         initial={{ x: '-100%', opacity: 0 }}
@@ -24,6 +28,7 @@ const Blog = ({ articles }) => {
               <h1>
                 Some <span>articles</span>
               </h1>
+              <p>Freelance, Front-End stuff, Snippets...</p>
             </div>
             <ArticlesList articles={articles} />
           </div>

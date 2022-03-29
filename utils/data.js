@@ -24,14 +24,18 @@ export const menu = [
 export const projectCategories = [
   {
     id: 1,
-    name: 'Multi-Page',
+    name: 'One-Page',
   },
   {
     id: 2,
-    name: 'LMS',
+    name: 'Multi-Page',
   },
   {
     id: 3,
+    name: 'LMS',
+  },
+  {
+    id: 4,
     name: 'E-Commerce',
   },
 ];

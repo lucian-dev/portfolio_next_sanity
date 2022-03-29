@@ -1,4 +1,5 @@
 import { FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import siteMetadata from '@utils/siteMetadata';
 import ContactForm from './ContactForm';
 import styles from './Contact.module.scss';
 
@@ -18,14 +19,10 @@ const ContactContent = () => {
             </svg>
           </span>
           <h5>Social</h5>
-          <a
-            href="https://www.linkedin.com/in/lucian-dev/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <a href={siteMetadata.linkedin} target="_blank" rel="noreferrer noopener">
             <FaLinkedinIn />
           </a>
-          <a href="https://github.com/lucian-dev" target="_blank" rel="noreferrer noopener">
+          <a href={siteMetadata.github} target="_blank" rel="noreferrer noopener">
             <FaGithub />
           </a>
         </div>
@@ -36,7 +33,7 @@ const ContactContent = () => {
             </svg>
           </span>
           <h5>Email</h5>
-          <a href="mailto:lucian.dev13@gmail.com">lucian.dev13[at]gmail.com</a>
+          <a href={`mailto:${siteMetadata.email}`}>{siteMetadata.email}</a>
         </div>
       </div>
       <ContactForm />

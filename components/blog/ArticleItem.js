@@ -4,11 +4,10 @@ import BlockContent from '@sanity/block-content-to-react';
 import { RiArrowGoBackLine } from 'react-icons/ri';
 import { TiSocialFacebook, TiSocialTwitter, TiSocialLinkedin } from 'react-icons/ti';
 import { FacebookShareButton, TwitterShareButton, LinkedinShareButton } from 'react-share';
+import siteMetadata from '@utils/siteMetadata';
 import Sidebar from './Sidebar';
 import ArticleCard from './ArticleCard';
 import styles from './Blog.module.scss';
-
-const baseUrl = `${process.env.NEXT_PUBLIC_BASE_URL}`;
 
 const ArticleItem = ({ article, related }) => {
   const router = useRouter();
@@ -32,17 +31,17 @@ const ArticleItem = ({ article, related }) => {
         />
         <div className={styles.social}>
           <span>Share:</span>
-          <FacebookShareButton url={baseUrl + router.asPath}>
+          <FacebookShareButton url={`${siteMetadata.siteUrl}${router.asPath}`}>
             <TiSocialFacebook />
           </FacebookShareButton>
           <TwitterShareButton
-            url={baseUrl + router.asPath}
+            url={`${siteMetadata.siteUrl}${router.asPath}`}
             title={title}
             hashtags={['dev-articles', `${title}`]}
           >
             <TiSocialTwitter />
           </TwitterShareButton>
-          <LinkedinShareButton url={baseUrl + router.asPath} title={title}>
+          <LinkedinShareButton url={`${siteMetadata.siteUrl}${router.asPath}`} title={title}>
             <TiSocialLinkedin />
           </LinkedinShareButton>
         </div>

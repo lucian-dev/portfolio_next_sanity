@@ -15,12 +15,6 @@ const Layout = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <meta property="og:image" content="/preview_th.png" key="ogimage" />
-        <meta
-          name="description"
-          content="I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages."
-        />
-        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
       <Navbar />
       <main className={styles.mainWrapper}>

@@ -1,7 +1,8 @@
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { client } from 'client';
 import { featuredProjects, allTestimonials } from '@utils/data';
+import siteMetadata from '@utils/siteMetadata';
+import HeadSeo from '@components/head/HeadSeo';
 import AboutContent from '@components/about/AboutContent';
 import LastProjects from '@components/projects/LastProjects';
 import Testimonials from '@components/testimonials/Testimonials';
@@ -10,9 +11,12 @@ import styles from '@components/layout/Layout.module.scss';
 const About = ({ lastProjects, testimonials }) => {
   return (
     <>
-      <Head>
-        <title>About - Lucian-DEV</title>
-      </Head>
+      <HeadSeo
+        title={`About -- Lucian-DEV`}
+        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        canonicalUrl={`${siteMetadata.siteUrl}/about`}
+        ogType={'website'}
+      />
       <motion.section
         className={styles.mainSection}
         initial={{ x: '-100%', opacity: 0 }}

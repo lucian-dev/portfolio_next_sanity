@@ -1,7 +1,8 @@
-import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { client } from 'client';
+import { client, urlFor } from 'client';
 import { allProjects, projectDetail, allTestimonials } from '@utils/data';
+import siteMetadata from '@utils/siteMetadata';
+import HeadSeo from '@components/head/HeadSeo';
 import ProjectItem from '@components/projects/ProjectItem';
 import Testimonials from '@components/testimonials/Testimonials';
 import styles from '@components/layout/Layout.module.scss';
@@ -9,9 +10,13 @@ import styles from '@components/layout/Layout.module.scss';
 const ProjectPage = ({ project, testimonials }) => {
   return (
     <>
-      <Head>
-        <title>Project - {project[0].title}</title>
-      </Head>
+      <HeadSeo
+        title={`Project -- ${project[0].title}`}
+        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        ogImageUrl={urlFor(project[0].image).url()}
+        canonicalUrl={`${siteMetadata.siteUrl}/projects/${project[0].slug.current}`}
+        ogType={'website'}
+      />
       <motion.section
         className={styles.mainSection}
         initial={{ x: '-100%', opacity: 0 }}

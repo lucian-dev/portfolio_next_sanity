@@ -1,8 +1,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { BsCheck2Circle } from 'react-icons/bs';
+import HeadSeo from '@components/head/HeadSeo';
 import styles from '@components/layout/Layout.module.scss';
 
 const Success = () => {
@@ -19,9 +19,11 @@ const Success = () => {
 
   return (
     <>
-      <Head>
-        <title>Message Sent - Lucian-DEV</title>
-      </Head>
+      <HeadSeo
+        title={`Message Sent - Lucian-DEV`}
+        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        ogType={'website'}
+      />
       <motion.section
         className={styles.mainSection}
         initial={{ x: '-100%', opacity: 0 }}
