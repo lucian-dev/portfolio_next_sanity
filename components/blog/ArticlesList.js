@@ -17,7 +17,7 @@ const ArticlesList = ({ articles }) => {
     <div className={`${styles.rowArticles} ${styles.blogPage}`}>
       <div className={styles.articlesGrid}>
         <AnimatePresence>
-          {activeArticles?.length > 1 ? (
+          {activeArticles?.length >= 1 ? (
             activeArticles.map((article) => <ArticleCard key={article._id} article={article} />)
           ) : (
             <p>No articles found</p>

@@ -28,7 +28,7 @@ const Blog = ({ articles }) => {
               <h1>
                 Some <span>articles</span>
               </h1>
-              <p>Freelance, Front-End stuff, Snippets...</p>
+              <p>Freelance, Front-End stuff, WordPress, Snippets...</p>
             </div>
             <ArticlesList articles={articles} />
           </div>

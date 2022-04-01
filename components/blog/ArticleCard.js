@@ -6,23 +6,9 @@ import { placeholder } from '@utils/data';
 import styles from './Blog.module.scss';
 
 const ArticleCard = ({ article }) => {
-  const cardStyle = (cat) => {
-    let style = `${styles.card} `;
-    switch (cat) {
-      case 'react-js':
-        return (style += `${styles.reactCard}`);
-      case 'next-js':
-        return (style += `${styles.nextCard}`);
-      case 'javascript':
-        return (style += `${styles.jsCard}`);
-      default:
-        return style;
-    }
-  };
-
   return (
     <motion.div
-      className={cardStyle(article.category)}
+      className={styles.card}
       layout
       initial={{ y: '-50%', opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}

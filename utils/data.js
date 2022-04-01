@@ -1,3 +1,4 @@
+// Main Navigation
 export const menu = [
   {
     id: 1,
@@ -19,8 +20,14 @@ export const menu = [
     page: 'Contact',
     path: '/contact',
   },
+  {
+    id: 5,
+    page: 'Blog',
+    path: '/blog',
+  },
 ];
 
+// Projects Categories
 export const projectCategories = [
   {
     id: 1,
@@ -40,32 +47,31 @@ export const projectCategories = [
   },
 ];
 
+// Articles Categories
 export const articleCategories = [
   {
     id: 1,
-    name: 'HTML',
+    name: 'Web',
   },
   {
     id: 2,
-    name: 'CSS',
+    name: 'Front-End',
   },
   {
     id: 3,
-    name: 'JavaScript',
+    name: 'WordPress',
   },
   {
     id: 4,
-    name: 'React-JS',
-  },
-  {
-    id: 5,
-    name: 'Next-JS',
+    name: 'Freelance',
   },
 ];
 
+// Next/Image Placeholder
 export const placeholder =
   'data:image/webp;base64,UklGRlACAABXRUJQVlA4WAoAAAAgAAAAPQMAbgIASUNDUBgCAAAAAAIYAAAAAAQwAABtbnRyUkdCIFhZWiAAAAAAAAAAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAAHRyWFlaAAABZAAAABRnWFlaAAABeAAAABRiWFlaAAABjAAAABRyVFJDAAABoAAAAChnVFJDAAABoAAAAChiVFJDAAABoAAAACh3dHB0AAAByAAAABRjcHJ0AAAB3AAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAFgAAAAcAHMAUgBHAEIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFhZWiAAAAAAAABvogAAOPUAAAOQWFlaIAAAAAAAAGKZAAC3hQAAGNpYWVogAAAAAAAAJKAAAA+EAAC2z3BhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABYWVogAAAAAAAA9tYAAQAAAADTLW1sdWMAAAAAAAAAAQAAAAxlblVTAAAAIAAAABwARwBvAG8AZwBsAGUAIABJAG4AYwAuACAAMgAwADEANlZQOEwRAAAALz2DmwAHUKMa1aj/gYjofwAA';
 
+// Queries "Projects"
 export const allProjects = `*[_type == 'project'] {
   _id,
   title,
@@ -105,19 +111,6 @@ export const featuredProjects = `*[_type == 'project' && featured == 'yes'] {
   }
 }`;
 
-export const allTestimonials = `*[_type == 'testimonial'] {
-  _id,
-  author,
-  authorImage {
-    asset -> {
-      url
-    }
-  },
-  authorProject,
-  authorTitle,
-  text
-}`;
-
 export const projectDetail = (slug) => {
   const query = `*[slug.current == "${slug}"] {
     _id,
@@ -138,6 +131,21 @@ export const projectDetail = (slug) => {
   return query;
 };
 
+// Query "Testimonials"
+export const allTestimonials = `*[_type == 'testimonial'] {
+  _id,
+  author,
+  authorImage {
+    asset -> {
+      url
+    }
+  },
+  authorProject,
+  authorTitle,
+  text
+}`;
+
+// Queries "Articles"
 export const allArticles = `*[_type == 'article'] {
   _id,
   title,

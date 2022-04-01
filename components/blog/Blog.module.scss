@@ -74,67 +74,6 @@
   }
 }
 
-.reactCard,
-.nextCard,
-.jsCard {
-  &::before,
-  &::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    z-index: 1;
-    transition: all 0.2s ease-in-out;
-  }
-  &::before {
-    width: 2px;
-    height: 25px;
-  }
-  &::after {
-    width: 75px;
-    height: 2px;
-  }
-  &:hover {
-    &:after {
-      width: 100%;
-    }
-    &:before {
-      height: 0;
-    }
-  }
-}
-
-.jsCard {
-  &::before,
-  &::after {
-    background: #f0db4f;
-  }
-  .cardMetaCat {
-    color: #f0db4f;
-  }
-}
-
-.reactCard {
-  &::before,
-  &::after {
-    background: #61dbfb;
-  }
-  .cardMetaCat {
-    color: #61dbfb;
-  }
-}
-
-.nextCard {
-  &::before,
-  &::after {
-    background: var(--primaryColor);
-  }
-  .cardMetaCat {
-    color: var(--primaryColor);
-  }
-}
-
 .cardImage {
   position: relative;
   width: 100%;
