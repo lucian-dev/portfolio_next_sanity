@@ -38,7 +38,7 @@ const ArticlesList = ({ articles }) => {
           <h3>Most recent</h3>
           {articles
             .filter((item) => item.articleDate >= backdate)
-            .slice(0, 2)
+            .slice(0, 1)
             .map((article) => (
               <ArticleCard key={article._id} article={article} />
             ))}

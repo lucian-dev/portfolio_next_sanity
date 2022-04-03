@@ -48,9 +48,9 @@ const ArticleItem = ({ article, related }) => {
       </div>
       <Sidebar>
         <div className={styles.sidebarCol}>
-          <h3>Related Articles</h3>
+          <h3>Other Articles</h3>
           {related
-            .filter((item) => item.category === category)
+            .filter((item) => item.category !== category)
             .slice(0, 2)
             .map((article) => (
               <ArticleCard key={article._id} article={article} />
