@@ -25,12 +25,13 @@ const AboutContent = () => {
             tools and development methods. Usually, simple and efficient methods work best.
           </p>
           <p>
-            I like working with Jamstack arhitecture (React, Next-JS) for better experience,
-            performance, scalability.
+            I like working with WordPress CMS, due to its flexibility and intuitive dashboard which
+            offer the possibility to insert content easily. The WordPress sites I create are
+            bespoke, specifically for the end-user.
           </p>
           <p>
-            I also use WordPress, due to its flexibility and intuitive dashboard. The WordPress
-            sites I create are bespoke, specifically for the end-user.
+            I also work with JAMstack architecture (React, Next-JS) for a better experience,
+            performance, and scalability.
           </p>
           <p>
             I have been able to enjoy the success of projects working both as a freelancer but also
