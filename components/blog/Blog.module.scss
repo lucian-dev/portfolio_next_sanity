@@ -130,6 +130,12 @@
     width: 100%;
     max-width: 768px;
   }
+  blockquote {
+    margin: 25px 0;
+    border-left: 4px solid var(--secondaryColor);
+    padding-left: 15px;
+    font-size: 2rem;
+  }
   .social {
     display: flex;
     align-items: center;
