@@ -10,7 +10,7 @@ const ArticlesList = ({ articles }) => {
   const { data: activeArticles, category, setCategory } = useFilter(filteredArticles, articles);
 
   let now = new Date();
-  let backdate = now.setDate(now.getDate() - 5);
+  let backdate = now.setDate(now.getDate() - 7);
   backdate = new Date(backdate).toISOString().slice(0, 10);
 
   return (
@@ -37,7 +37,7 @@ const ArticlesList = ({ articles }) => {
         <div className={styles.sidebarCol}>
           <h3>Most recent</h3>
           {articles
-            .filter((item) => item.articleDate >= backdate)
+            .filter((item) => item.articleDate > backdate)
             .slice(0, 1)
             .map((article) => (
               <ArticleCard key={article._id} article={article} />
