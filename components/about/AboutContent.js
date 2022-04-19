@@ -35,7 +35,7 @@ const AboutContent = () => {
           </p>
           <p>
             I have been able to enjoy the success of projects working both as a freelancer but also
-            collaborating with web design agencies such as{' '}
+            collaborating with designers and web design agencies such as{' '}
             <a href="https://quart.ro" target="_blank" rel="noreferrer noopener">
               Quart Agency
             </a>
