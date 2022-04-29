@@ -20,11 +20,6 @@ export const menu = [
     page: 'Contact',
     path: '/contact',
   },
-  {
-    id: 5,
-    page: 'Blog',
-    path: '/blog',
-  },
 ];
 
 // Projects Categories
@@ -44,26 +39,6 @@ export const projectCategories = [
   {
     id: 4,
     name: 'E-Commerce',
-  },
-];
-
-// Articles Categories
-export const articleCategories = [
-  {
-    id: 1,
-    name: 'Web',
-  },
-  {
-    id: 2,
-    name: 'Front-End',
-  },
-  {
-    id: 3,
-    name: 'WordPress',
-  },
-  {
-    id: 4,
-    name: 'Freelance',
   },
 ];
 
@@ -144,50 +119,3 @@ export const allTestimonials = `*[_type == 'testimonial'] {
   authorTitle,
   text
 }`;
-
-// Queries "Articles"
-export const allArticles = `*[_type == 'article'] {
-  _id,
-  title,
-  slug,
-  featuredImage {
-    asset -> {
-      url
-    }
-  },
-  category,
-  articleDate,
-}`;
-
-export const filteredArticles = (category) => {
-  const query = `*[_type == "article" && category == "${category}"] {
-    _id,
-    title,
-    slug,
-    featuredImage {
-      asset -> {
-        url
-      }
-    },
-    category,
-    articleDate,
-  }`;
-  return query;
-};
-
-export const singleArticle = (slug) => {
-  const query = `*[slug.current == "${slug}"] {
-    _id,
-    title,
-    slug,
-    featuredImage {
-      asset -> {
-        url
-      }
-    },
-    body,
-    category,
-    articleDate,
-  }`;
-  return query;
-};

@@ -12,7 +12,7 @@ const ProjectPage = ({ project, testimonials }) => {
     <>
       <HeadSeo
         title={`Project -- ${project[0].title}`}
-        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        description="I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages."
         ogImageUrl={urlFor(project[0].image).url()}
         canonicalUrl={`${siteMetadata.siteUrl}/projects/${project[0].slug.current}`}
         ogType={'website'}

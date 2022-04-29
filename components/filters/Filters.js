@@ -1,8 +1,8 @@
 import styles from './Filters.module.scss';
 
-const Filters = ({ category, setCategory, classType, categoryLink }) => {
+const Filters = ({ category, setCategory, categoryLink }) => {
   return (
-    <ul className={styles[classType]}>
+    <ul className={styles.filterProducts}>
       <li>
         <button className={!category ? 'btnS isActive' : 'btnS'} onClick={() => setCategory(null)}>
           View All

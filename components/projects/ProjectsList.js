@@ -10,12 +10,7 @@ const ProjectsList = ({ projects }) => {
 
   return (
     <>
-      <Filters
-        category={category}
-        setCategory={setCategory}
-        categoryLink={projectCategories}
-        classType="filterProducts"
-      />
+      <Filters category={category} setCategory={setCategory} categoryLink={projectCategories} />
       <div className={styles.projectsGrid}>
         <AnimatePresence>
           {activeProjects &&

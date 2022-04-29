@@ -13,7 +13,7 @@ export default function Home({ lastProjects, testimonials }) {
     <>
       <HeadSeo
         title={`Lucian-DEV -- Freelance Front-end Developer`}
-        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        description="I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages."
         canonicalUrl={siteMetadata.siteUrl}
         ogType={'website'}
       />

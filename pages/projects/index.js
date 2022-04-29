@@ -12,7 +12,7 @@ const Projects = ({ projects, testimonials }) => {
     <>
       <HeadSeo
         title={`Projects -- Lucian-DEV`}
-        description={`I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages.`}
+        description="I build different types of websites like One-Page, Magazine, E-commerce, Portfolio, Blogs, Landing Pages."
         canonicalUrl={`${siteMetadata.siteUrl}/projects`}
         ogType={'website'}
       />
