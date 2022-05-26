@@ -55,11 +55,12 @@ const AboutContent = () => {
           </p>
           <p>
             If you&apos;d like to start a successful project, look no more for a developer for your
-            website. Let&apos;s build together, <Link href="/contact">contact me</Link>.
+            website. Let&apos;s build toghether, <Link href="/contact">contact me</Link>.
           </p>
+          <p>I&apos;m also open to long-term collaborations with designers or web agencies.</p>
           <p>
             Current stack__
-            <span>#css #js #react #next-js #wordpress #netlify</span>
+            <span>#html #css #js #wordpress #react #next-js #netlify</span>
           </p>
         </div>
       </div>
